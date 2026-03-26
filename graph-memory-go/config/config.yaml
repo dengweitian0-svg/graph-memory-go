@@ -1,0 +1,88 @@
+server:
+  http:
+    host: "127.0.0.1"
+    port: 8080
+  grpc:
+    host: "0.0.0.0"
+    port: 9090
+  websocket:
+    host: "0.0.0.0"
+    port: 8081
+
+neo4j:
+  uri: "your_uri"
+  username: "neo4j"
+  password: "12345678"
+  max_connection_pool_size: 50
+  connection_timeout: 30s
+  max_transaction_retry_time: 30s
+
+redis:
+  addr: "your_add"
+  password: ""
+  db: 0
+  pool_size: 20
+
+# LLM配置 - 基于eino框架
+# 文档: https://github.com/cloudwego/eino
+llm:
+  # API配置
+  api_key: "your_api_key"                                      # API密钥（必需）
+  base_url: "https://ark.cn-beijing.volces.com/api/v3"           # API地址
+
+  # 模型配置
+  chat_model: "doubao-seed-2-0-pro-260215"                             # 聊天模型
+  embedding_model: "doubao-embedding-vision-251215"              # 嵌入模型
+
+  # 生成参数
+  temperature: 0.7
+  max_tokens: 4096
+
+  # 超时设置
+  timeout: 60s
+
+  # 功能开关
+  enabled: true
+
+algorithms:
+  pagerank:
+    damping_factor: 0.85
+    max_iterations: 20
+    convergence_delta: 0.000001
+  community_detection:
+    max_iterations: 10
+  deduplication:
+    similarity_threshold: 0.95
+
+recall:
+  dual_path:
+    precise_weight: 0.6
+    generalized_weight: 0.4
+    limit: 20
+    max_depth: 3
+
+cache:
+  l1:
+    enabled: true
+    ttl: 30s
+    max_size: 10000
+  l2:
+    enabled: true
+    ttl: 5m
+
+logging:
+  level: "info"
+  output_path: "./log/app.log"
+  max_size: 104857600   # 100MB
+  max_backups: 10
+  max_age: 30
+  compress: true
+
+monitoring:
+  enabled: true
+  prometheus:
+    enabled: true
+    port: 9090
+  tracing:
+    enabled: true
+    endpoint: "localhost:4317"

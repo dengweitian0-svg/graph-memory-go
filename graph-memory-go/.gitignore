@@ -1,0 +1,50 @@
+# Binaries
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+tests/
+*.json
+docs/
+scripts/
+
+# Output of the go coverage tool
+*.out
+coverage/
+coverage.html
+
+# Go workspace file
+go.work
+
+# Dependency directories
+vendor/
+
+# IDE
+.idea/
+.vscode/
+.kiro/
+*.swp
+*.swo
+*~
+AGENTS.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+log/
+*.log
+docs/
+
+# Config (local overrides)
+config.local.yaml
+.env.local
+
+# Build
+dist/
