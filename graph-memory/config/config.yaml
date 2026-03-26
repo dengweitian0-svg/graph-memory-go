@@ -10,7 +10,7 @@ server:
     port: 8081
 
 neo4j:
-  uri: "bolt://114.55.114.108:7687"
+  uri: "your_uri"
   username: "neo4j"
   password: "12345678"
   max_connection_pool_size: 50
@@ -18,7 +18,7 @@ neo4j:
   max_transaction_retry_time: 30s
 
 redis:
-  addr: "114.55.114.108:6379"
+  addr: "your_add"
   password: ""
   db: 0
   pool_size: 20
@@ -27,7 +27,7 @@ redis:
 # 文档: https://github.com/cloudwego/eino
 llm:
   # API配置
-  api_key: "7d3f1112-8528-46ba-b1d3-588e3a14825e"                                      # API密钥（必需）
+  api_key: "your_api_key"                                      # API密钥（必需）
   base_url: "https://ark.cn-beijing.volces.com/api/v3"           # API地址
 
   # 模型配置
